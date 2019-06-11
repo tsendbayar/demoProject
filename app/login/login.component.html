@@ -1,0 +1,19 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+
+            <div>
+                <label>Нэр</label>
+                <input type="text" formControlName="name">
+            </div>
+
+            <div>
+                <label>Нууц үг</label>
+                <input type="password" formControlName="pass">
+            </div>
+
+            <button class="btn btn-primary" type="submit">Нэвтрэх</button>
+
+        </form>
+    </div>
+</div>

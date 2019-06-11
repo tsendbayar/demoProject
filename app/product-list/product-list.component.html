@@ -1,0 +1,25 @@
+<h2>Бараанууд</h2>
+<br>
+<div class="container-fluid">
+    <span>{{ user }}</span>
+    <div class="row">
+        <div *ngFor="let product of products; index as productId">
+            <div class="col-sm-8">
+                <div class="card">
+                    <img class="card-img-top" [src]="product.imgLink" alt="image">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
+                            {{ product.name }}
+                        </a>
+                        </h4>
+                        <p class=" card-text " [title]="product.description " id="desc">{{ product.description }}</p>
+                        <a id="more " class="btn btn-primary " [routerLink]="[ '/products', productId] ">Дэлгэрэнгүй</a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
